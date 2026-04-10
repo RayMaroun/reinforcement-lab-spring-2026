@@ -3,6 +3,7 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class MyApplication {
+
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
@@ -20,7 +21,23 @@ public class MyApplication {
         System.out.println("======================================================");
         printDrinkingEligibility(name, age);
         System.out.println("======================================================");
+
+        double number = getNumber(myScanner);
+        double squareRoot = calculateSquareRoot(number);
+        System.out.println("The square root of " + number + " is " + squareRoot);
+        System.out.println("======================================================");
+
     }
+
+    public static double getNumber(Scanner scanner) {
+        System.out.println("Enter a number:");
+        return scanner.nextDouble();
+    }
+
+    public static double calculateSquareRoot(double number) {
+        return Math.sqrt(number);
+    }
+
 
     public static void printDrinkingEligibility(String name, int age) {
         if (name.equalsIgnoreCase("Bob") && age >= 21) {
