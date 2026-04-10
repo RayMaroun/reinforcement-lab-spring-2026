@@ -32,6 +32,20 @@ public class MyApplication {
         boolean isGreaterThanVariable = isGreaterThan(firstNumber, secondNumber);
         System.out.println(firstNumber + " is greater than " + secondNumber + ": " + isGreaterThanVariable);
 
+        /*String welcomeMessage;
+
+        if (name.equalsIgnoreCase("Lara")) {
+            welcomeMessage = "You are not welcome " + name + "!";
+        } else {
+            welcomeMessage = "Welcome, " + name + "!";
+        }*/
+
+        String welcomeMessage = name.equalsIgnoreCase("Lara") ? "You are not welcome " + name + "!" : "Welcome, " + name + "!";
+
+        System.out.println(welcomeMessage);
+        System.out.println("======================================================");
+
+
     }
 
     public static int getFirstNumber(Scanner scanner) {
