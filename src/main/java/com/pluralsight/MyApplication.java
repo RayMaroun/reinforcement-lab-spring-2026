@@ -38,7 +38,6 @@ public class MyApplication {
         return Math.sqrt(number);
     }
 
-
     public static void printDrinkingEligibility(String name, int age) {
         if (name.equalsIgnoreCase("Bob") && age >= 21) {
             System.out.println("You are old enough to drink.");
@@ -47,11 +46,33 @@ public class MyApplication {
         }
     }
 
-    public static void printWelcomeMessage(String name) {
+    /*public static void printWelcomeMessage(String name) {
         if (name.equalsIgnoreCase("Alice")) {
             System.out.println("Welcome, Alice!");
         } else {
             System.out.println("Hello, stranger!");
+        }
+    }*/
+
+    /*public static void printWelcomeMessage(String name) {
+        switch (name.toLowerCase()){
+            case "alice":
+                System.out.println("Welcome, Alice!");
+                break;
+            case "bob":
+                System.out.println("Hey Bob, do you want to grab a drink?");
+                break;
+            default:
+                System.out.println("Hello, stranger!");
+                break;
+        }
+    }*/
+
+    public static void printWelcomeMessage(String name) {
+        switch (name.toLowerCase()) {
+            case "alice" -> System.out.println("Welcome, Alice!");
+            case "bob" -> System.out.println("Hey Bob, do you want to grab a drink?");
+            default -> System.out.println("Hello, stranger!");
         }
     }
 
