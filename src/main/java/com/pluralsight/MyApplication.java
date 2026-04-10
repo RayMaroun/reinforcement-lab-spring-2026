@@ -27,6 +27,30 @@ public class MyApplication {
         System.out.println("The square root of " + number + " is " + squareRoot);
         System.out.println("======================================================");
 
+        int firstNumber = getFirstNumber(myScanner);
+        int secondNumber = getSecondNumber(myScanner);
+        boolean isGreaterThanVariable = isGreaterThan(firstNumber, secondNumber);
+        System.out.println(firstNumber + " is greater than " + secondNumber + ": " + isGreaterThanVariable);
+
+    }
+
+    public static int getFirstNumber(Scanner scanner) {
+        System.out.println("Enter the first number:");
+        return scanner.nextInt();
+    }
+
+    public static int getSecondNumber(Scanner scanner) {
+        System.out.println("Enter the second number:");
+        return scanner.nextInt();
+    }
+
+    public static boolean isGreaterThan(int firstNumber, int secondNumber) {
+        /*if(firstNumber > secondNumber){
+            return true;
+        } else {
+            return false;
+        }*/
+        return firstNumber > secondNumber;
     }
 
     public static double getNumber(Scanner scanner) {
